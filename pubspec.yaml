@@ -44,9 +44,11 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  assets:
+    - images/logo_feira.png
+
   # To add assets to your application, add an assets section, like this:
-   assets:
-     - assets/logo_feira.png
+  
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
