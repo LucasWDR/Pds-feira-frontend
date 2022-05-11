@@ -103,13 +103,6 @@ class LoginPage extends StatelessWidget {
                         ),
                         textAlign: TextAlign.left,
                       ),
-                      Container(
-                        child: SizedBox(
-                          child: Image.asset("assets/bone.png"),
-                          height: 28,
-                          width: 28,
-                        ),
-                      )
                     ],
                   ),
                   onPressed: () {
@@ -149,13 +142,6 @@ class LoginPage extends StatelessWidget {
                         ),
                         textAlign: TextAlign.left,
                       ),
-                      Container(
-                        child: SizedBox(
-                          child: Image.asset("assets/fb-icon.png"),
-                          height: 28,
-                          width: 28,
-                        ),
-                      )
                     ],
                   ),
                   onPressed: () {},
