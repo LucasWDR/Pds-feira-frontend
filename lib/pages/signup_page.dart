@@ -6,14 +6,22 @@ class SignupPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+  appBar: AppBar(
+       title: Text("Registro de Vendedor"),
+       centerTitle: true,
+       backgroundColor:Color.fromARGB(255, 245, 133, 36)
+     ),
       body: Container(
         padding: EdgeInsets.only(top: 10, left: 40, right: 40),
         color: Colors.white,
         child: ListView(
           children: <Widget>[
+            SizedBox(
+             height: 20,
+            ),
             Container(
               width: 200,
-              height: 200,
+              height: 150,
               alignment: Alignment(0.0, 1.15),
               child: Container(
                 height: 56,
@@ -25,7 +33,7 @@ class SignupPage extends StatelessWidget {
                     end: Alignment.bottomRight,
                     stops: [0.3, 1.0],
                     colors: [
-                      Color(0xFFF58524),
+                      Color.fromARGB(255, 245, 133, 36),
                       Color(0XFFF92B7F),
                     ],
                   ),
@@ -84,6 +92,42 @@ class SignupPage extends StatelessWidget {
                 fontSize: 20,
               ),
             ),
+             SizedBox(
+              height: 10,
+            ),
+            TextFormField(
+              // autofocus: true,
+              keyboardType: TextInputType.emailAddress,
+              decoration: InputDecoration(
+                labelText: "Senha",
+                labelStyle: TextStyle(
+                  color: Colors.black38,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 20,
+                ),
+              ),
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+             SizedBox(
+              height: 10,
+            ),
+            TextFormField(
+              // autofocus: true,
+              keyboardType: TextInputType.emailAddress,
+              decoration: InputDecoration(
+                labelText: "Comfirmar Senha",
+                labelStyle: TextStyle(
+                  color: Colors.black38,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 20,
+                ),
+              ),
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
            SizedBox(
               height: 10,
             ),
@@ -93,6 +137,40 @@ class SignupPage extends StatelessWidget {
               obscureText: true,
               decoration: InputDecoration(
                 labelText: "CPF",
+                labelStyle: TextStyle(
+                  color: Colors.black38,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 20,
+                ),
+              ),
+              style: TextStyle(fontSize: 20),
+            ),
+              SizedBox(
+              height: 10,
+            ),
+            TextFormField(
+              // autofocus: true,
+              keyboardType: TextInputType.text,
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: "Endereço",
+                labelStyle: TextStyle(
+                  color: Colors.black38,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 20,
+                ),
+              ),
+              style: TextStyle(fontSize: 20),
+            ),
+              SizedBox(
+              height: 10,
+            ),
+            TextFormField(
+              // autofocus: true,
+              keyboardType: TextInputType.text,
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: "Nome da empresa",
                 labelStyle: TextStyle(
                   color: Colors.black38,
                   fontWeight: FontWeight.w400,
