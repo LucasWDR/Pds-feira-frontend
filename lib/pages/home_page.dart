@@ -9,7 +9,7 @@ class HomeScreen extends StatefulWidget {
 
  @override
 class HomePage extends StatelessWidget {
-  
+
   int _indiceAtual = 0;
   final List<Widget> _telas = [
     NewPageScreen("Minha conta"),
@@ -26,15 +26,19 @@ class HomePage extends StatelessWidget {
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.person), 
-              title: Text("Minha conta")
+              label: "Minha conta"
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.shopping_basket),
-              title: Text("Meus pedidos")
+              label: "Meus produtos"
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.favorite),
-              title: Text("Favoritos")
+              label: "Pedidos"
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.favorite),
+              label: "Configurações"
           ),
         ],
       ),
