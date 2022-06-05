@@ -2,31 +2,38 @@ import 'package:flutter/material.dart';
 
 import 'package:pds_feira/pages/new_page_test.dart';
 
-class HomeScreen extends StatefulWidget {
-  @override
-  _HomeScreenState createState() => _HomeScreenState();
-}
+ class HomeScreen extends StatefulWidget{
+   HomePage createState()=> HomePage();
+ }
 
  @override
-class HomePage extends StatelessWidget {
+class HomePage extends State<HomeScreen>{
 
-  int _indiceAtual = 0;
+  int indiceAtual = 0;
   final List<Widget> _telas = [
-    NewPageScreen("Minha conta"),
-    NewPageScreen("Meus pedidos"),
+    NewPageScreen("Home"),
+    NewPageScreen("Meus Produtos"),
+    NewPageScreen("Pedidos"),
     NewPageScreen("Favoritos")
   ];
+
+  void onTabTapped(int index) {
+    setState((){
+       indiceAtual = index;
+    });
+  }
+
    Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: _telas[_indiceAtual],
+      body: _telas[indiceAtual],
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _indiceAtual,
+        currentIndex: indiceAtual,
         onTap: onTabTapped,
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.person), 
-              label: "Minha conta"
+              label: "Home"
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.shopping_basket),
@@ -41,7 +48,12 @@ class HomePage extends StatelessWidget {
               label: "Configurações"
           ),
         ],
+      selectedItemColor: Colors.deepOrange,
+      unselectedItemColor: Colors.grey,
+      iconSize: 30,
+
       ),
     );
-  }
+  }  
 }
+///ignore: must_be_immutable
