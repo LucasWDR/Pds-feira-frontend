@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'package:pds_feira/pages/new_page_test.dart';
@@ -24,7 +25,17 @@ class HomePage extends State<HomeScreen>{
   }
 
    Widget build(BuildContext context) {
-    return Scaffold(
+   return Column(
+    children: <Widget>[
+     Container(
+      decoration: BoxDecoration(
+       color:Colors.deepOrange,
+       borderRadius: BorderRadius.only(
+         bottomLeft: Radius.circular(36),
+         bottomRight: Radius.circular(36),
+         ),
+      ),  
+      child: Scaffold(
       appBar: AppBar(),
       body: _telas[indiceAtual],
       bottomNavigationBar: BottomNavigationBar(
@@ -32,7 +43,7 @@ class HomePage extends State<HomeScreen>{
         onTap: onTabTapped,
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.person), 
+              icon: Icon(Icons.house), 
               label: "Home"
           ),
           BottomNavigationBarItem(
@@ -44,16 +55,18 @@ class HomePage extends State<HomeScreen>{
               label: "Pedidos"
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.favorite),
+              icon: Icon(Icons.person),
               label: "Configurações"
           ),
         ],
       selectedItemColor: Colors.deepOrange,
       unselectedItemColor: Colors.grey,
-      iconSize: 30,
-
+      iconSize: 30,   
       ),
-    );
+     ),
+    ),
+    ],
+  );
   }  
 }
 ///ignore: must_be_immutable
