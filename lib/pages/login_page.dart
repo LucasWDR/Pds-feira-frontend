@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:pds_feira/pages/home_page.dart';
+//import 'package:pds_feira/pages/home_page.dart';
+
 import 'package:pds_feira/pages/reset_password.dart';
 import 'package:pds_feira/pages/signup_page.dart';
-
+import 'package:pds_feira/pages/home/home_screen.dart';
+//import 'package:pds_feira/pages/home_page.dart';
 class LoginPage extends StatelessWidget {
    @override
   Widget build(BuildContext context) {

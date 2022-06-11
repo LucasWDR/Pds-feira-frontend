@@ -1,8 +1,8 @@
-import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'components/body.dart';
 
-import 'package:pds_feira/pages/new_page_test.dart';
+//import 'package:pds_feira/pages/new_page_test.dart';
 
  class HomeScreen extends StatefulWidget{
    HomePage createState()=> HomePage();
@@ -11,7 +11,7 @@ import 'package:pds_feira/pages/new_page_test.dart';
  @override
 class HomePage extends State<HomeScreen>{
 
-  int indiceAtual = 0;
+  /* int indiceAtual = 0;
   final List<Widget> _telas = [
     NewPageScreen("Home"),
     NewPageScreen("Meus Produtos"),
@@ -68,6 +68,12 @@ class HomePage extends State<HomeScreen>{
     ),
     ],
   );
-  }  
+  }   */
+@override
+ Widget build(BuildContext context) {
+    return Scaffold(
+      body: Body(),
+    );
+  }
 }
 ///ignore: must_be_immutable
