@@ -72,7 +72,18 @@ class HomePage extends State<HomeScreen>{
 @override
  Widget build(BuildContext context) {
     return Scaffold(
+      appBar: buildAppBar(),
       body: Body(),
+    );
+  }
+
+  AppBar buildAppBar() {
+    return AppBar(
+      elevation: 0,
+      leading: IconButton(
+        icon: Image.asset("images/logo.png"),
+        onPressed: () {},
+      ),
     );
   }
 }
