@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import '../../../constants.dart';
-
 class HeaderWithSearchBox extends StatelessWidget {
   const HeaderWithSearchBox({
     Key key,
@@ -40,7 +38,7 @@ class HeaderWithSearchBox extends StatelessWidget {
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
                 Spacer(),
-                Image.asset("assets/images/logo.png")
+                //Image.asset("assets/images/logo.png")
               ],
             ),
           ),
@@ -82,7 +80,7 @@ class HeaderWithSearchBox extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Image.asset("images/icons/search.svg"),
+                  Icon(Icons.search),
                 ],
               ),
             ),
