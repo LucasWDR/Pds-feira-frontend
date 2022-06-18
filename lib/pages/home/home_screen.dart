@@ -4,6 +4,7 @@ import 'package:pds_feira/pages/login_page.dart';
 import 'components/body.dart';
 import '../../../constants.dart';
 import 'package:pds_feira/pages/componentes/my_bottom_nav_bar.dart';
+import 'package:pds_feira/pages/new_page_test.dart';
  class HomeScreen extends StatefulWidget{
    HomePage createState()=> HomePage();
  }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:pds_feira/size_config.dart';
+import 'package:pds_feira/size_config.dart';
 
 
 const kPrimaryColor =Color(0xFFFF7643);

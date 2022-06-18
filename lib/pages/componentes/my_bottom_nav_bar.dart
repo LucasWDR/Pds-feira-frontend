@@ -10,10 +10,10 @@ class MyBottomNavBar extends State<MyBottomNavBarScreen> {
 
 int indiceAtual = 0;
   final List<Widget> _telas = [
-    NewPageScreen("Home"),
-    NewPageScreen("Meus Produtos"),
-    NewPageScreen("Pedidos"),
-    NewPageScreen("Favoritos")
+    NewPageScreen(texto:"Home"[1]),
+    NewPageScreen(texto:"Meus Produtos"[2]),
+    NewPageScreen(texto: "Pedidos"[3]),
+    NewPageScreen(texto:"Favoritos"[4])
   ];
 
 void onTabTapped(int index) {
@@ -24,7 +24,7 @@ void onTabTapped(int index) {
   @override
   Widget build(BuildContext context) {
     return Container(
-     /*  padding: EdgeInsets.only(
+      /* padding: EdgeInsets.only(
         left: kDefaultPadding * 2,
         right: kDefaultPadding * 2,
         bottom: kDefaultPadding,
