@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:pds_feira/constants.dart';
+
 import '../new_page_test.dart';
 
-class MyBottomNavBarScreen extends StatefulWidget {
-   MyBottomNavBar createState()=> MyBottomNavBar();
+class MyBottomNavBarScreen extends StatefulWidget{
+  MyBottomNavBar createState()=> MyBottomNavBar();
 }
+class MyBottomNavBar extends State<MyBottomNavBarScreen> {
 
-@override
-
-class MyBottomNavBar extends State<MyBottomNavBarScreen>{
-  int indiceAtual = 0;
+int indiceAtual = 0;
   final List<Widget> _telas = [
     NewPageScreen("Home"),
     NewPageScreen("Meus Produtos"),
@@ -16,24 +16,30 @@ class MyBottomNavBar extends State<MyBottomNavBarScreen>{
     NewPageScreen("Favoritos")
   ];
 
-  void onTabTapped(int index) {
+void onTabTapped(int index) {
     setState((){
        indiceAtual = index;
     });
   }
-
   @override
   Widget build(BuildContext context) {
-  return Column(
-    children: <Widget>[
-     Container(
+    return Container(
+     /*  padding: EdgeInsets.only(
+        left: kDefaultPadding * 2,
+        right: kDefaultPadding * 2,
+        bottom: kDefaultPadding,
+      ), */
+      height: 80,
       decoration: BoxDecoration(
-       color:Colors.deepOrange,
-       borderRadius: BorderRadius.only(
-         bottomLeft: Radius.circular(36),
-         bottomRight: Radius.circular(36),
-         ),
-      ),  
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            offset: Offset(0, -10),
+            blurRadius: 35,
+            color: kPrimaryColor.withOpacity(0.38),
+          ),
+        ],
+      ),
       child: Scaffold(
       appBar: AppBar(),
       body: _telas[indiceAtual],
@@ -63,8 +69,6 @@ class MyBottomNavBar extends State<MyBottomNavBarScreen>{
       iconSize: 30,   
       ),
      ),
-    ),
-    ],
-  ); 
+    );
   }
 }
